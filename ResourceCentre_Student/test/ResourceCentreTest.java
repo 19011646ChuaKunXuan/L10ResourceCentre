@@ -100,10 +100,11 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void retrieveAllChromebookTest() {
-		//normal condition
+		//normal conditions ?
 			String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
 			String output = "";
 			assertNotEquals("Test to see that there are items inside the list", 0, chromebookList);
+			
 					
 		//error test
 			ResourceCentre.addChromebook(chromebookList, cb1);
