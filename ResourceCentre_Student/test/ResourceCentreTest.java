@@ -100,13 +100,18 @@ public class ResourceCentreTest {
 	@Test
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
+		
 		// write your code here
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
-		//fail("Not yet implemented");
-		// write your code here
+		// boundary test 
+		assertNotNull("Check if there is a chromebook arrayList to add to", chromebookList);
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		// error test 
+		Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB001");
+		assertFalse("Check that chromebook with tag CB001 is returned", isReturned);
 	}
 	
 	@After
