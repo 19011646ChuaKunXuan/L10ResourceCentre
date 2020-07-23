@@ -71,6 +71,7 @@ public class ResourceCentreTest {
 		assertNotSame("Test that added Chromebook does not already exist in list?", cb2, chromebookList.get(0));
 	
 		
+		
 	}
 	
 	@Test
