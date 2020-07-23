@@ -67,7 +67,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
 		
-		//Item added must be different from the rest. (Must not have been added yet)
+		//Item added must be different from the rest. (Must not have been added previously)
 		assertNotSame("Test that added Chromebook does not already exist in list?", cb2, chromebookList.get(0));
 	
 		
@@ -100,8 +100,20 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void retrieveAllChromebookTest() {
-		//fail("Not yet implemented");
-		// write your code here
+		//normal conditions ?
+			String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+			String output = "";
+			assertNotEquals("Test to see that there are items inside the list", 0, chromebookList);
+			
+					
+		//error test
+			ResourceCentre.addChromebook(chromebookList, cb1);
+			ResourceCentre.addChromebook(chromebookList, cb2);
+			assertNotEquals("Test to see if chromebook list adds on to the original list of items", 2, chromebookList.size());
+
+			
+			
+		
 	}
 
 	@Test
