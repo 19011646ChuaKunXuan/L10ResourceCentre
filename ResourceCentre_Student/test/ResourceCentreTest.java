@@ -67,7 +67,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
 		
-		//Item added must be different from the rest. (Must not have been added yet)
+		//Item added must be different from the rest. (Must not have been added previously)
 		assertNotSame("Test that added Chromebook does not already exist in list?", cb2, chromebookList.get(0));
 	
 		
