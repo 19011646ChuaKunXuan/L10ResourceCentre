@@ -145,12 +145,19 @@ public class ResourceCentre {
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
-		// write your code here
+		for (int k = 0; k < chromebookList.size(); k++) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(k).getAssetTag(),
+					chromebookList.get(k).getDescription(),
+					ResourceCentre.showAvailability(chromebookList.get(k).getIsAvailable()),
+					chromebookList.get(k).getDueDate(), chromebookList.get(k).getOs());
+		}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
-		
-		String output = retrieveAllChromebook(chromebookList);
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE", "OS");
+		   output += retrieveAllChromebook(chromebookList);
 		System.out.println(output);
 	}
 
