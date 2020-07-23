@@ -69,7 +69,7 @@ public class ResourceCentreTest {
 		
 		//Item added must be different from the rest. (Must not have been added yet)
 		assertNotSame("Test that added Chromebook does not already exist in list?", cb2, chromebookList.get(0));
-		
+	
 		
 	}
 	
